@@ -14,7 +14,7 @@ This uses alpine linux as base image, hence the small size. The default command 
 
 # Supported tags and respective Dockerfile links
 
-* 1.1, 1.0, latest(https://github.com/curioustechnoid/mojolicious/blob/main/Docker/Dockerfile)
+* [1.1, 1.0, latest](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/Dockerfile)
 
 
 # How to use this image
