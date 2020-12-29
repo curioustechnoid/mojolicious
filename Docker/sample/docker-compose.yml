@@ -1,0 +1,54 @@
+version: "3.8"
+
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+# AUTHOR  :  The Curious Technoid
+# DATE    :  28-Dec-2020
+# PURPOSE :
+#       This docker-compose file is used in build and run your project image(eg: mojoproject)
+#       using the curioustechnoid/mojolicious image
+#
+# USAGE:
+#           docker-compose up
+#           docker-compose up -d
+#           docker-compose down
+#
+# UPDATES:
+#           AUTHOR                    DATE           VERSION      COMMENTS
+#           The Curious Technoid      28-Dec-2020    1.0          Initial Version
+#
+#
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#
+
+services:
+  # Giving a name to our service
+  webapp:
+
+    # Building our project image using the project Dockerfile
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+    # Running as apache user
+    user: apache
+
+    # Setting the working directory
+    working_dir: /var/www/mojolicious/
+
+    # Running the command which will render our application
+    command: "hypnotoad -f script/mojoproject"
+
+    # Exposing the port
+    ports:
+      - 8080:8080
+      - 3000:3000
+
+    # Mounting local volumes in development instance
+    # volumes:
+    #  - ./mojoproject/:/var/www/mojolicious/
+
+    # If running in production instance you would want to restart always
+    restart: "always"
+

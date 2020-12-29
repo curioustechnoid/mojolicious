@@ -17,6 +17,7 @@
 #           AUTHOR                    DATE           VERSION      COMMENTS
 #           The Curious Technoid      28-Dec-2020    1.0          Initial Version
 #
+#           The Curious Technoid      29-Dec-2020    1.1          Added JSON perl module
 #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
@@ -46,7 +47,7 @@ RUN apk update && apk add ca-certificates && update-ca-certificates && apk add w
 RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Mojolicious
 
 # Install popular Perl Modules required for webdevelopment 
-RUN cpanm Mojo::mysql LWP::Protocol::https Crypt::Eksblowfish::Bcrypt Mojolicious::Plugin::SecurityHeader
+RUN cpanm Mojo::mysql LWP::Protocol::https Crypt::Eksblowfish::Bcrypt Mojolicious::Plugin::SecurityHeader JSON
 
 # Set the working directory to mojolicious directory created above
 WORKDIR /var/www/mojolicious
