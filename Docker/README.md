@@ -40,7 +40,7 @@ This uses alpine linux as base image, hence the small size. The default command 
 
    #### Method 2: Using Compose
 
-* Create your own docker-compose file to build and run your application, you can use [this sample file](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/sample/docker-compose.yml). First create the [Dockerfile](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/sample/Dockerfile) using the Method 1 and then create docker-compose, after which run the below command:
+* Create your own docker-compose file to build and run your application, you can use [this sample file](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/sample/docker-compose.yml). First create the [Dockerfile](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/sample/Dockerfile) using the Method 1 above and then create the [docker-compose](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/sample/docker-compose.yml) file, Once both the files are created, run the below command:
 
 ```
     docker-compose up
