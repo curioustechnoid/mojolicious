@@ -5,6 +5,8 @@ This uses alpine linux as base image, hence the small size. The default command 
 
 # Included Modules in the image
 
+* Mojolicious (8.69, Supervillain)
+* Perl (v5.30.3)
 * Mojo::mysql
 * LWP::Protocol::https
 * Crypt::Eksblowfish::Bcrypt
@@ -49,5 +51,5 @@ This uses alpine linux as base image, hence the small size. The default command 
 
 # Source
 
-The source of this image on [GitHub](https://github.com/curioustechnoid/mojolicious/blob/main/Docker).
+You can find the source of this image on [GitHub](https://github.com/curioustechnoid/mojolicious/blob/main/Docker).
 
