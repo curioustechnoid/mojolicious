@@ -3,20 +3,28 @@ This docker image has all the tools and libraries required to run Mojolicious We
 
 This uses alpine linux as base image, hence the small size. The default command for this image is a shell(/bin/sh).
 
+Version 2.0 : Added Minions and related DB connectors for it.
+
 # Included Modules in the image
 
-* Mojolicious (8.69, Supervillain)
-* Perl (v5.30.3)
+* Mojolicious (9.17, Waffle)
+* Perl (v5.32)
 * Mojo::mysql
 * LWP::Protocol::https
 * Crypt::Eksblowfish::Bcrypt
 * Mojolicious::Plugin::SecurityHeader
 * JSON
+* Minion
+* Minion::Backend::SQLite
+* Minion::Backend::mysql
+* Minion::Backend::Pg
+
 
 
 # Supported tags and respective Dockerfile links
 
-* [1.1, 1.0, latest](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/Dockerfile)
+* Mojolicious 9.17 with Minion [2.0, latest](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/Dockerfile)
+* Mojolicious [1.1, 1.0]
 
 
 # How to use this image

@@ -19,11 +19,15 @@
 #
 #           The Curious Technoid      29-Dec-2020    1.1          Added JSON perl module
 #
+#           The Curious Technoid      19-Apr-2021    2.0          Upgraded the OS to alpine:3.13.5
+#                                                                 Upgraded Mojolicious to 9.17 (Waffle)
+#                                                                 Added Minion and related DB connectors.
+#
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 
 # Using Alphine linux as base image
-FROM alpine:3.12.3
+FROM alpine:3.13.5
 MAINTAINER The Curious Technoid <thecurioustechnoid@gmail.com>
 
 # Expose all default Mojolicious Ports
@@ -47,7 +51,7 @@ RUN apk update && apk add ca-certificates && update-ca-certificates && apk add w
 RUN curl -L https://cpanmin.us | perl - -M https://cpan.metacpan.org -n Mojolicious
 
 # Install popular Perl Modules required for webdevelopment 
-RUN cpanm Mojo::mysql LWP::Protocol::https Crypt::Eksblowfish::Bcrypt Mojolicious::Plugin::SecurityHeader JSON
+RUN cpanm Mojo::mysql LWP::Protocol::https Crypt::Eksblowfish::Bcrypt Mojolicious::Plugin::SecurityHeader JSON Minion Minion::Backend::SQLite Minion::Backend::mysql Minion::Backend::Pg
 
 # Set the working directory to mojolicious directory created above
 WORKDIR /var/www/mojolicious
