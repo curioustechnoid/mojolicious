@@ -7,7 +7,7 @@ Version 2.0 : Added Minions and related DB connectors for it.
 
 # Included Modules in the image
 
-* Mojolicious (9.17, Waffle)
+* Mojolicious (9.22, Waffle)
 * Perl (v5.32)
 * Mojo::mysql
 * LWP::Protocol::https
@@ -23,7 +23,8 @@ Version 2.0 : Added Minions and related DB connectors for it.
 
 # Supported tags and respective Dockerfile links
 
-* Mojolicious 9.17 with Minion [2.0, latest](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/Dockerfile)
+* Mojolicious 9.22 with Minion [3.0, latest](https://github.com/curioustechnoid/mojolicious/blob/main/Docker/Dockerfile)
+* Mojolicious 9.17 with Minion [2.0]
 * Mojolicious [1.1, 1.0]
 
 

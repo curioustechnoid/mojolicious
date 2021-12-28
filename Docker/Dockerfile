@@ -23,11 +23,14 @@
 #                                                                 Upgraded Mojolicious to 9.17 (Waffle)
 #                                                                 Added Minion and related DB connectors.
 #
+#           The Curious Technoid      28-Dec-2021    3.0          Upgraded the OS to alpine:3.15
+#                                                                 Upgraded Mojolicious to 9.22 (Waffle)
+#
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 #
 
 # Using Alphine linux as base image
-FROM alpine:3.13.5
+FROM alpine:3.15
 MAINTAINER The Curious Technoid <thecurioustechnoid@gmail.com>
 
 # Expose all default Mojolicious Ports
